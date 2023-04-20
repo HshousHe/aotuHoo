@@ -1,9 +1,9 @@
-name: ci
+name: runAutogreen
 
 on:
   push:
     branches:
-    - main
+    - master
   schedule:
     - cron: "* 18 * * *"
     
