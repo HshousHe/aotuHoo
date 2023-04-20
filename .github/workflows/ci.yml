@@ -14,11 +14,11 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
 
-      - name: Auto green
+      - name: run Auto
         run: |
           git config --local user.email "1597344758@qq.com"
           git config --local user.name "HshousHe"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.DAY_TOKEN }}@github.com/${{ github.repository }} 
-          git pull --rebase
-          git commit --allow-empty -m ":white_check_mark: 今天 又是充满希望的一天呢"
+          git pull origin master
+          git commit  -m "今天 又是充满希望的一天呢"
           git push
